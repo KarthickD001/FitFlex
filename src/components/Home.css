@@ -1,0 +1,71 @@
+
+/* Home.css */
+.home-container {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.challenge-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.challenge-section .content h2 {
+    color: #333;
+}
+
+.challenge-section .content p {
+    color: #666;
+}
+
+.start-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+.workout-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.workout-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.workout-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.workout-card .details h3 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.workout-card .details p {
+    color: #666;
+}
+
+.workout-card .start-workout {
+    background-color: #28a745;
+}
+
+.workout-card .start-workout:hover {
+    background-color: #1e7e34;
+}

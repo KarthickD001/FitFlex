@@ -1,0 +1,72 @@
+--- START OF FILE Diet.css ---
+.diet-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid var(--secondary-color); /* CSS variable for border */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background-color: var(--card-background); /* CSS variable for background */
+    color: var(--text-color); /* CSS variable for text color */
+}
+
+.diet-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color); /* CSS variable for primary color */
+    font-size: 2.2rem;
+}
+
+.meal-card {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: var(--border-radius);
+    background-color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.meal-card h3 {
+    color: var(--text-color); /* CSS variable for text color */
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.meal-item {
+    color: var(--text-secondary); /* CSS variable for secondary text color */
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.calorie-count {
+    float: right;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.recipe-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color); /* CSS variable for primary color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.recipe-link:hover {
+    color: var(--accent-color); /* CSS variable for accent color */
+    text-decoration: underline;
+}
+
+.total-calories {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    color: var(--primary-color); /* CSS variable for primary color */
+    margin-top: 20px;
+}

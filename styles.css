@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #FFEB3B;
+    --secondary-color: #CDDC39;
+    --background-color: #cecece;
+    --card-background: #1E1E1E;
+    --text-color: #FFFFFF;
+    --text-secondary: #BDBDBD;
+    --accent-color: #FFC107;
+    --header-height: 70px;
+    --footer-height: 70px;
+    --border-radius: 8px;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s ease-in-out;
+    --sidebar-width: 240px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--card-background);
+    box-shadow: var(--shadow);
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 0;
+    transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    border-left: 4px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: var(--primary-color);
+    background-color: rgba(255, 235, 59, 0.1);
+    border-left-color: var(--primary-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar i {
+    font-size: 1.2rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--card-background);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+footer {
+    background-color: var(--card-background);
+    height: var(--footer-height);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #333;
+    box-shadow: var(--shadow);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.content-wrapper {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    letter-spacing: 0.4px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo:hover {
+    color: var(--accent-color);
+    transform: scale(1.03);
+}
+
+.day-selector {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(255, 235, 59, 0.05);
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-selector .day {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-background);
+    border: 1px solid #444;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.day-selector .day:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.day-selector .day.active {
+    background-color: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Add other styles from Index.html here */

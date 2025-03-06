@@ -1,0 +1,48 @@
+--- START OF FILE Wellness.css ---
+.wellness-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid var(--secondary-color); /* CSS variable for border */
+    border-radius: var(--border-radius);
+    background-color: var(--card-background); /* CSS variable for background */
+    color: var(--text-color); /* CSS variable for text color */
+}
+
+.wellness-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color); /* CSS variable for primary color */
+    font-size: 2.2rem;
+}
+
+.tip-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-list li {
+    margin-bottom: 20px;
+    color: var(--text-secondary); /* CSS variable for secondary text color */
+    line-height: 1.7;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    background-color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color); /* CSS variable for accent color */
+    width: 30px;
+    text-align: center;
+}

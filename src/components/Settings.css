@@ -1,0 +1,82 @@
+--- START OF FILE Settings.css ---
+.settings-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid var(--secondary-color); /* CSS variable for border */
+    border-radius: var(--border-radius);
+    background-color: var(--card-background); /* CSS variable for background */
+    color: var(--text-color); /* CSS variable for text color */
+}
+
+.settings-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color); /* CSS variable for primary color */
+    font-size: 2.2rem;
+}
+
+.setting-card {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: var(--border-radius);
+    background-color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.setting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.setting-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color); /* CSS variable for accent color */
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+.setting-card h3 {
+    color: var(--text-color); /* CSS variable for text color */
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.setting-card p {
+    color: var(--text-secondary); /* CSS variable for secondary text color */
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.setting-input-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.setting-input-group input[type="number"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #777;
+    border-radius: var(--border-radius);
+    background-color: #444;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.setting-input-group button {
+    background-color: var(--primary-color); /* CSS variable for primary color */
+    color: #000;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.setting-input-group button:hover {
+    background-color: var(--accent-color); /* CSS variable for accent color */
+}

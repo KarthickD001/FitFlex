@@ -1,0 +1,243 @@
+--- START OF FILE Layout.css ---
+/* Layout.css */
+
+.app-container {
+  display: flex;
+  min-height: 100vh; /* Ensure full viewport height */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--card-background);
+  box-shadow: var(--shadow);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 0;
+  transition: var(--transition);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  border-left: 4px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: var(--primary-color);
+  background-color: rgba(255, 235, 59, 0.1);
+  border-left-color: var(--primary-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar i {
+  font-size: 1.2rem;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* Content Area Styles */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color); /* Match body background */
+  color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--card-background);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  letter-spacing: 0.4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header .logo:hover {
+  color: var(--accent-color);
+  transform: scale(1.03);
+}
+
+.day-selector {
+  display: flex;
+}
+
+.day {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: background-color 0.2s ease;
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.day.active {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-wrapper {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--card-background);
+  height: var(--footer-height);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #333;
+  box-shadow: var(--shadow);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+}
+
+.nav-icons a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: var(--accent-color);
+}
+
+.nav-icons i {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-icons i:hover {
+  color: var(--accent-color);
+  transform: scale(1.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Switch Styles */
+.dark-mode-switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--card-background);
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.dark-mode-switch:hover {
+  background-color: var(--accent-color);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.dark-mode-switch i {
+  font-size: 1.2rem;
+}
+
+/* General Button Styles */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #000;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+  box-shadow: var(--shadow);
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--card-background);
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode {
+  --background-color: #1E1E1E;
+  --card-background: #2C2C2C;
+  --text-color: #E0E0E0;
+  --text-secondary: #9E9E9E;
+}
